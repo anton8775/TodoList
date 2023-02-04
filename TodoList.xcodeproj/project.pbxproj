@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		D1121E6D298F016E0000FE1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1121E6C298F016E0000FE1F /* AppDelegate.swift */; };
 		D1121E6F298F016E0000FE1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1121E6E298F016E0000FE1F /* SceneDelegate.swift */; };
-		D1121E71298F016E0000FE1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1121E70298F016E0000FE1F /* ViewController.swift */; };
-		D1121E74298F016E0000FE1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1121E72298F016E0000FE1F /* Main.storyboard */; };
 		D1121E76298F016F0000FE1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1121E75298F016F0000FE1F /* Assets.xcassets */; };
 		D1121E79298F016F0000FE1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1121E77298F016F0000FE1F /* LaunchScreen.storyboard */; };
+		D1121E85298F02B40000FE1F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1121E84298F02B40000FE1F /* HomeViewController.swift */; };
+		D1121E87298F02EB0000FE1F /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1121E86298F02EB0000FE1F /* AddTaskViewController.swift */; };
+		D1121E89298F03040000FE1F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1121E88298F03040000FE1F /* TableViewCell.swift */; };
+		D1121E8B298F03100000FE1F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1121E8A298F03100000FE1F /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D1121E69298F016E0000FE1F /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1121E6C298F016E0000FE1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1121E6E298F016E0000FE1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D1121E70298F016E0000FE1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D1121E73298F016E0000FE1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1121E75298F016F0000FE1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1121E78298F016F0000FE1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1121E7A298F016F0000FE1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1121E84298F02B40000FE1F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D1121E86298F02EB0000FE1F /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		D1121E88298F03040000FE1F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D1121E8A298F03100000FE1F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,41 @@
 		D1121E6B298F016E0000FE1F /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				D1121E83298F028E0000FE1F /* Model */,
+				D1121E81298F02770000FE1F /* Views */,
+				D1121E80298F02670000FE1F /* Controllers */,
 				D1121E6C298F016E0000FE1F /* AppDelegate.swift */,
 				D1121E6E298F016E0000FE1F /* SceneDelegate.swift */,
-				D1121E70298F016E0000FE1F /* ViewController.swift */,
-				D1121E72298F016E0000FE1F /* Main.storyboard */,
 				D1121E75298F016F0000FE1F /* Assets.xcassets */,
 				D1121E77298F016F0000FE1F /* LaunchScreen.storyboard */,
 				D1121E7A298F016F0000FE1F /* Info.plist */,
 			);
 			path = TodoList;
+			sourceTree = "<group>";
+		};
+		D1121E80298F02670000FE1F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1121E84298F02B40000FE1F /* HomeViewController.swift */,
+				D1121E86298F02EB0000FE1F /* AddTaskViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D1121E81298F02770000FE1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1121E88298F03040000FE1F /* TableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D1121E83298F028E0000FE1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1121E8A298F03100000FE1F /* Task.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +157,6 @@
 			files = (
 				D1121E79298F016F0000FE1F /* LaunchScreen.storyboard in Resources */,
 				D1121E76298F016F0000FE1F /* Assets.xcassets in Resources */,
-				D1121E74298F016E0000FE1F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +167,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1121E71298F016E0000FE1F /* ViewController.swift in Sources */,
+				D1121E89298F03040000FE1F /* TableViewCell.swift in Sources */,
 				D1121E6D298F016E0000FE1F /* AppDelegate.swift in Sources */,
+				D1121E87298F02EB0000FE1F /* AddTaskViewController.swift in Sources */,
 				D1121E6F298F016E0000FE1F /* SceneDelegate.swift in Sources */,
+				D1121E8B298F03100000FE1F /* Task.swift in Sources */,
+				D1121E85298F02B40000FE1F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D1121E72298F016E0000FE1F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D1121E73298F016E0000FE1F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D1121E77298F016F0000FE1F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +315,6 @@
 				INFOPLIST_FILE = TodoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +341,6 @@
 				INFOPLIST_FILE = TodoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
