@@ -23,11 +23,18 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Let's Do It"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(moveToAddTaskVC))
+        navigationItem.rightBarButtonItem?.style = .plain
         
         view.addSubview(taskList)
         
         setConstraints()
         setupTaskList()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        taskList.rowHeight = UITableView.automaticDimension
+        taskList.estimatedRowHeight = 100
     }
 
     func setConstraints(){
@@ -53,6 +60,10 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
